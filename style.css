@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --darkCyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --veryDarkBlue: hsl(212, 21%, 14%);
+  --darkGrayBlue: hsl(228, 12%, 48%);
+}
+
+html {
+  font-size: 14px;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  background: var(--cream);
+}
+
+div.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.6em;
+  width: 20.57rem;
+  overflow: hidden;
+  color: var(--darkGrayBlue);
+  font-weight: 500;
+}
+
+picture img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-name,
+.price {
+  font-family: "Fraunces";
+}
+
+h1 {
+  color: var(--veryDarkBlue);
+  line-height: 0.9;
+  margin-top: 0;
+}
+
+.product-type {
+  text-transform: uppercase;
+  letter-spacing: 0.6ch;
+  font-size: x-small;
+  position: relative;
+  top: -1rem;
+}
+
+div.product-img {
+  display: flex;
+  flex-basis: 100%;
+}
+
+div.description {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  flex-basis: 50%;
+}
+
+.product-info {
+  line-height: 1.5;
+  font-size: smaller;
+}
+
+div.price-tag {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+span.current-price {
+  color: var(--darkCyan);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+span.old-price {
+  text-decoration: line-through;
+  font-size: smaller;
+  color: var(--darkGrayBlue);
+}
+
+button {
+  all: unset;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: small;
+  font-family: "Montserrat";
+  color: white;
+  border-radius: 0.4rem;
+  background-color: var(--darkCyan);
+  text-align: center;
+  height: 3rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 56rem) {
+  div.card {
+    font-size: larger;
+    flex-direction: row;
+    align-items: center;
+    width: 41rem;
+  }
+  div.product-img {
+    flex-basis: 50%;
+  }
+  div.description {
+    height: 100%;
+    gap: 0.7rem;
+  }
+  .product-type {
+    font-size: small;
+    padding-top: 1.1rem;
+  }
+  h1 {
+    margin: 0;
+  }
+  .current-price {
+    font-size: 3rem;
+    color: red;
+  }
+}
